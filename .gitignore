@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+dev-server.log
+public/video/master_scrollytelling_g1.mp4
+master_scrollytelling_g1.mp4

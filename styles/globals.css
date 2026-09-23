@@ -1,0 +1,168 @@
+:root {
+  --bg: #050509;
+  --champagne: #F2D28B;
+  --ivory: #F6F3F0;
+  --grey: #9E9EAE;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: #050509;
+  color: #f6f3f0;
+  font-family: "Inter", sans-serif;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(242, 210, 139, 0.22);
+  color: #f6f3f0;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #050509;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(242, 210, 139, 0.3);
+  border-radius: 2px;
+}
+
+.display-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  color: #f6f3f0;
+}
+
+.label-small {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #9e9eae;
+}
+
+.body-copy {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #9e9eae;
+}
+
+.btn-outline {
+  border: 1px solid #f2d28b;
+  color: #f2d28b;
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 26px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+.btn-outline:hover {
+  background: rgba(242, 210, 139, 0.1);
+}
+
+.btn-solid {
+  background: #f2d28b;
+  color: #050509;
+  border-radius: 999px;
+  padding: 10px 26px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+.btn-solid:hover {
+  background: #d9b96f;
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #f2d28b;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(242, 210, 139, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+}
+
+body.cursor-hovering .cursor-dot {
+  width: 4px;
+  height: 4px;
+}
+
+body.cursor-hovering .cursor-ring {
+  width: 52px;
+  height: 52px;
+  border-color: rgba(242, 210, 139, 0.9);
+}
