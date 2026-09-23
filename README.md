@@ -1,7 +1,7 @@
 # Patek Philippe — Scroll-Driven Cinematic Experience
 
-> **Live:** https://patek-philippe-web.vercel.app
-> **Source:** https://github.com/biplabshankar27-code/patek-philippe-web
+> **Live:** https://patek-philippe-web-bspx.vercel.app
+> **Source:** https://github.com/biplabshankar27-code/Patek-Philippe-Web-App
 > **Stack:** Next.js 14 (Pages Router) · TypeScript · GSAP · Lenis · motion · TailwindCSS 3
 
 A luxury, scroll-driven cinematic watch website in the spirit of Cartier / Apple / Dior brand pages. A 47-second generated hero film is scrubbed frame-by-frame as the user scrolls through 12 scenes; five Patek Philippe timepieces are revealed at ambient loop points, each with its own product panel.
@@ -172,7 +172,7 @@ Segment timeline (seconds) is stored in `config/frames.ts:SEGMENTS`. It is calib
 
 ## Deployment
 
-Production: **https://patek-philippe-web.vercel.app** (Vercel ↔ GitHub connected)
+Production: **https://patek-philippe-web-bspx.vercel.app** (Vercel ↔ GitHub connected)
 
 - `git push` → automatic build + deploy
 - Pull requests → preview URLs
